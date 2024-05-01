@@ -77,7 +77,7 @@
 
         async function checkServiceStatus(serviceName, statusElement, imageElement) {
             try {
-                const response = await fetch(`http://${serviceName}`);
+                const response = await fetch(serviceName);
                 if (response.ok) {
                     statusElement.textContent = "Online";
                     imageElement.src = "assets/img/success.png";
@@ -95,15 +95,15 @@
         }
 
         const services = [
-            { name: "lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
-            { name: "api.lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
-            { name: "docs.lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
-            { name: "status.lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
-			{ name: "apps.lucasof.com", statusId: "apps", imageSrc: "assets/img/success.png" },
-            { name: "smp.lucasof.com", statusId: "apps", imageSrc: "assets/img/success.png" },
-			{ name: "estatisticas.lucasof.com:5000", statusId: "misc", imageSrc: "assets/img/success.png" },
-            { name: "irc.lucasof.com", statusId: "misc", imageSrc: "assets/img/success.png" },
-            { name: "test.lucasof.com", statusId: "misc", imageSrc: "assets/img/success.png" }
+            { name: "https://lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
+            { name: "https://api.lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
+            { name: "https://docs.lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
+            { name: "https://status.lucasof.com", statusId: "main", imageSrc: "assets/img/success.png" },
+			{ name: "https://apps.lucasof.com", statusId: "apps", imageSrc: "assets/img/success.png" },
+            { name: "https://smp.lucasof.com", statusId: "apps", imageSrc: "assets/img/success.png" },
+			{ name: "http://estatisticas.lucasof.com:5000", statusId: "misc", imageSrc: "assets/img/success.png" },
+            { name: "https://irc.lucasof.com", statusId: "misc", imageSrc: "assets/img/success.png" },
+            { name: "https://test.lucasof.com", statusId: "misc", imageSrc: "assets/img/success.png" }
 			
         ];
 
